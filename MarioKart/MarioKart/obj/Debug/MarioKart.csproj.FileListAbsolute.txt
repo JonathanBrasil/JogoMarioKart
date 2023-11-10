@@ -1,0 +1,10 @@
+D:\Jonathan\Documents\CORRIDA\MarioKart\MarioKart\bin\Debug\MarioKart.exe.config
+D:\Jonathan\Documents\CORRIDA\MarioKart\MarioKart\bin\Debug\MarioKart.exe
+D:\Jonathan\Documents\CORRIDA\MarioKart\MarioKart\bin\Debug\MarioKart.pdb
+D:\Jonathan\Documents\CORRIDA\MarioKart\MarioKart\obj\Debug\MarioKart.csproj.AssemblyReference.cache
+D:\Jonathan\Documents\CORRIDA\MarioKart\MarioKart\obj\Debug\MarioKart.Form1.resources
+D:\Jonathan\Documents\CORRIDA\MarioKart\MarioKart\obj\Debug\MarioKart.Properties.Resources.resources
+D:\Jonathan\Documents\CORRIDA\MarioKart\MarioKart\obj\Debug\MarioKart.csproj.GenerateResource.cache
+D:\Jonathan\Documents\CORRIDA\MarioKart\MarioKart\obj\Debug\MarioKart.csproj.CoreCompileInputs.cache
+D:\Jonathan\Documents\CORRIDA\MarioKart\MarioKart\obj\Debug\MarioKart.exe
+D:\Jonathan\Documents\CORRIDA\MarioKart\MarioKart\obj\Debug\MarioKart.pdb

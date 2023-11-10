@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorridaMarioKart", "CorridaMarioKart\CorridaMarioKart.csproj", "{36C46616-E68D-45DA-827F-819C14CF3BEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36C46616-E68D-45DA-827F-819C14CF3BEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36C46616-E68D-45DA-827F-819C14CF3BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36C46616-E68D-45DA-827F-819C14CF3BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36C46616-E68D-45DA-827F-819C14CF3BEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6502754-38CB-4E2A-A514-73E5451D0C29}
+	EndGlobalSection
+EndGlobal
