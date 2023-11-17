@@ -17,6 +17,10 @@ namespace MarioKart
         //CONTADOR REGRESSIVO
         int regressivo = 3;
 
+        //TEMPO CORRIDA
+        int mm, ss, ff = 0; //variaveis minutos segundos e milisegundos
+        
+
 
         Personagem Personagem1;
         Personagem Personagem2;
@@ -96,14 +100,9 @@ namespace MarioKart
             //CONTADOR NA TELA
             Contagem.Visible = true;
             timer1.Enabled = true;
-            Contagem.Text = Convert.ToString(regressivo);
-            
-            
+            Contagem.Text = Convert.ToString(regressivo);           
            
             string nome1, nome2, nome3, nome4;
-
-            await Task.Delay(4000);
-
 
             //DEFININDO A SELECAO DE PERSONAGEM
             nome1 = Convert.ToString(comboBox1.SelectedItem);
@@ -138,6 +137,15 @@ namespace MarioKart
 
 
 
+            //COMECANDO CORRIDA
+
+            //TEMPO DE CORRIDA
+            await Task.Delay(4000);
+            timer2.Enabled = true;
+            timer2.Start();
+
+
+
             while (Personagem1.Correr() == false && Personagem2.Correr() == false && Personagem3.Correr() == false && Personagem4.Correr() == false)
             {
                 Application.DoEvents();
@@ -165,6 +173,8 @@ namespace MarioKart
                 lblvencedor.Text = nome4; //nome do vencedor na tela
             }
 
+            timer2.Stop();
+
             p1.Visible = false;
             p2.Visible = false;
             p3.Visible = false;
@@ -176,6 +186,13 @@ namespace MarioKart
 
         private void btreiniciar_Click(object sender, EventArgs e)
         {
+            //reiniciando valor do cronometro
+            timer2.Dispose();
+            mm = 0;
+            ss = 0;
+            ff = 0;
+            lbltempo.Text = $"0{mm}:0{ss}:{ff}";
+
             //REABILITANDO A SELECAO DE PERSONAGEM
             Gruposelecao.Enabled = true;
             pictureBox3.Enabled = true;
@@ -227,6 +244,23 @@ namespace MarioKart
         private void label1_Click_2(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            //CONDICOES DE INCREMENTO DO CRONOMETRO
+            ff++;
+            if (ff == 10)
+            {
+                    ss++; 
+                    ff = 0;
+            } else if (ss == 60)
+
+            {
+                mm++;
+                ss = 0;
+            }
+            lbltempo.Text = $"0{mm}:{ss}:0{ff}";
         }
 
         private void label2_Click_1(object sender, EventArgs e)

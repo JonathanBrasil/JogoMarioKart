@@ -53,15 +53,16 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btstart = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblvencedor = new System.Windows.Forms.Label();
             this.pictureboxwinner = new System.Windows.Forms.PictureBox();
             this.btreiniciar = new System.Windows.Forms.Button();
             this.Contagem = new System.Windows.Forms.Label();
             this.lbltempo = new System.Windows.Forms.Label();
-            this.lblvencedor = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.bandeira = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p2)).BeginInit();
@@ -348,6 +349,45 @@
             this.groupBox1.Text = "Vencedor";
             this.groupBox1.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe Print", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gold;
+            this.label2.Location = new System.Drawing.Point(66, 163);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(152, 65);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "venceu";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Font = new System.Drawing.Font("Segoe Print", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gold;
+            this.label1.Location = new System.Drawing.Point(14, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(257, 65);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "PARABÉNS!";
+            this.label1.Click += new System.EventHandler(this.label1_Click_2);
+            // 
+            // lblvencedor
+            // 
+            this.lblvencedor.AutoSize = true;
+            this.lblvencedor.BackColor = System.Drawing.SystemColors.Control;
+            this.lblvencedor.Font = new System.Drawing.Font("Segoe Print", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvencedor.ForeColor = System.Drawing.Color.Gold;
+            this.lblvencedor.Location = new System.Drawing.Point(124, 98);
+            this.lblvencedor.Name = "lblvencedor";
+            this.lblvencedor.Size = new System.Drawing.Size(37, 65);
+            this.lblvencedor.TabIndex = 2;
+            this.lblvencedor.Text = ".";
+            this.lblvencedor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblvencedor.Click += new System.EventHandler(this.lblvencedor_Click);
+            // 
             // pictureboxwinner
             // 
             this.pictureboxwinner.Image = ((System.Drawing.Image)(resources.GetObject("pictureboxwinner.Image")));
@@ -394,45 +434,6 @@
             this.lbltempo.Text = "00:00:00";
             this.lbltempo.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // lblvencedor
-            // 
-            this.lblvencedor.AutoSize = true;
-            this.lblvencedor.BackColor = System.Drawing.SystemColors.Control;
-            this.lblvencedor.Font = new System.Drawing.Font("Segoe Print", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblvencedor.ForeColor = System.Drawing.Color.Gold;
-            this.lblvencedor.Location = new System.Drawing.Point(124, 98);
-            this.lblvencedor.Name = "lblvencedor";
-            this.lblvencedor.Size = new System.Drawing.Size(37, 65);
-            this.lblvencedor.TabIndex = 2;
-            this.lblvencedor.Text = ".";
-            this.lblvencedor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblvencedor.Click += new System.EventHandler(this.lblvencedor_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.Font = new System.Drawing.Font("Segoe Print", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(14, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(257, 65);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "PARABÉNS!";
-            this.label1.Click += new System.EventHandler(this.label1_Click_2);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe Print", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(66, 163);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 65);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "venceu";
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
-            // 
             // bandeira
             // 
             this.bandeira.BackColor = System.Drawing.Color.Transparent;
@@ -448,6 +449,10 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Form1
             // 
@@ -520,6 +525,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox bandeira;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 
