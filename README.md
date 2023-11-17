@@ -13,6 +13,7 @@ A versão final terá incrementos como tela de vencedor e tela de seleção de p
 ## Screenshots
 
 ![App Screenshot](https://imgur.com/OpO52nC.png)
+![App Screenshot](https://i.imgur.com/4mY2kyT.png)
 
 
 ## Features 🧑🏾‍💻✅🚀
