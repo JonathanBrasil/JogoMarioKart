@@ -1,5 +1,5 @@
 
-# Criando um jogo simples
+# Criando um jogo simples 🎮🕹️
 
 A partir de um trabalho proposto para a materia de linguagem de programção da Fatec Mauá do curso de informática para negócios, irei criar um jogo de corrida.
 
@@ -15,20 +15,23 @@ A versão final terá incrementos como tela de vencedor e tela de seleção de p
 ![App Screenshot](https://imgur.com/OpO52nC.png)
 
 
-## Features
+## Features 🧑🏾‍💻✅🚀
 
 - [x]Estrutura principal definida
 - [x]Movimentação 
 - [x]Definir Vencedor
-- [ ]Sistema de Seleção de Personagens
+- [x]Contagem Regressiva antes de começar corrida
+- [x]Tela de vencedor com personagem
+- [ ]cronometro da partida
+- [ ]Sistema de Seleção de Personagens - PROGRESSO
 - [ ]Colocar personagens escolhidos para correr
-- [ ]Tela de vencedor com personagem
 - [ ]Sistema para não permitir personagens repetidos
-- [ ]Contagem Regressiva antes de começar corrida
+
+## Problemas ❌⚠️🐞
+- Após reiniciar a corrida não recomeça.
 
 
 
-
-## Tech Stack
+## Tech Stack ⚙️
 
 **Linguagem:** C#, Microsoft Visual Studio. 
