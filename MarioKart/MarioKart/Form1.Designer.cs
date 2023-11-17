@@ -35,33 +35,39 @@
             this.p1 = new System.Windows.Forms.PictureBox();
             this.p3 = new System.Windows.Forms.PictureBox();
             this.p4 = new System.Windows.Forms.PictureBox();
-            this.Selecao = new System.Windows.Forms.GroupBox();
+            this.Gruposelecao = new System.Windows.Forms.GroupBox();
+            this.lbl4 = new System.Windows.Forms.Label();
+            this.lbl3 = new System.Windows.Forms.Label();
+            this.lbl2 = new System.Windows.Forms.Label();
+            this.lblp1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblpersonagem4 = new System.Windows.Forms.Label();
+            this.lblpersonagem2 = new System.Windows.Forms.Label();
+            this.lblpersonagem3 = new System.Windows.Forms.Label();
+            this.lblpersonagem1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btstart = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btreiniciar = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lblpersonagem1 = new System.Windows.Forms.Label();
-            this.lblpersonagem3 = new System.Windows.Forms.Label();
-            this.lblpersonagem2 = new System.Windows.Forms.Label();
-            this.lblpersonagem4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Contagem = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p4)).BeginInit();
-            this.Selecao.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.Gruposelecao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -115,27 +121,194 @@
             this.p4.TabStop = false;
             this.p4.Visible = false;
             // 
-            // Selecao
+            // Gruposelecao
             // 
-            this.Selecao.BackColor = System.Drawing.Color.Transparent;
-            this.Selecao.Controls.Add(this.groupBox2);
-            this.Selecao.Controls.Add(this.comboBox4);
-            this.Selecao.Controls.Add(this.comboBox3);
-            this.Selecao.Controls.Add(this.comboBox2);
-            this.Selecao.Controls.Add(this.comboBox1);
-            this.Selecao.Controls.Add(this.lblpersonagem4);
-            this.Selecao.Controls.Add(this.lblpersonagem2);
-            this.Selecao.Controls.Add(this.lblpersonagem3);
-            this.Selecao.Controls.Add(this.lblpersonagem1);
-            this.Selecao.Controls.Add(this.pictureBox3);
-            this.Selecao.Controls.Add(this.btstart);
-            this.Selecao.Location = new System.Drawing.Point(12, 357);
-            this.Selecao.Name = "Selecao";
-            this.Selecao.Size = new System.Drawing.Size(747, 263);
-            this.Selecao.TabIndex = 6;
-            this.Selecao.TabStop = false;
-            this.Selecao.Text = "Seleção de Personagem";
-            this.Selecao.Enter += new System.EventHandler(this.Selecao_Enter);
+            this.Gruposelecao.BackColor = System.Drawing.Color.Transparent;
+            this.Gruposelecao.Controls.Add(this.lbl4);
+            this.Gruposelecao.Controls.Add(this.lbl3);
+            this.Gruposelecao.Controls.Add(this.lbl2);
+            this.Gruposelecao.Controls.Add(this.lblp1);
+            this.Gruposelecao.Controls.Add(this.groupBox2);
+            this.Gruposelecao.Controls.Add(this.comboBox4);
+            this.Gruposelecao.Controls.Add(this.comboBox3);
+            this.Gruposelecao.Controls.Add(this.comboBox2);
+            this.Gruposelecao.Controls.Add(this.comboBox1);
+            this.Gruposelecao.Controls.Add(this.lblpersonagem4);
+            this.Gruposelecao.Controls.Add(this.lblpersonagem2);
+            this.Gruposelecao.Controls.Add(this.lblpersonagem3);
+            this.Gruposelecao.Controls.Add(this.lblpersonagem1);
+            this.Gruposelecao.Controls.Add(this.pictureBox3);
+            this.Gruposelecao.Controls.Add(this.btstart);
+            this.Gruposelecao.Location = new System.Drawing.Point(12, 357);
+            this.Gruposelecao.Name = "Gruposelecao";
+            this.Gruposelecao.Size = new System.Drawing.Size(747, 263);
+            this.Gruposelecao.TabIndex = 6;
+            this.Gruposelecao.TabStop = false;
+            this.Gruposelecao.Text = "Seleção de Personagem";
+            this.Gruposelecao.Enter += new System.EventHandler(this.Selecao_Enter);
+            // 
+            // lbl4
+            // 
+            this.lbl4.AutoSize = true;
+            this.lbl4.Location = new System.Drawing.Point(261, 178);
+            this.lbl4.Name = "lbl4";
+            this.lbl4.Size = new System.Drawing.Size(0, 13);
+            this.lbl4.TabIndex = 13;
+            // 
+            // lbl3
+            // 
+            this.lbl3.AutoSize = true;
+            this.lbl3.Location = new System.Drawing.Point(261, 134);
+            this.lbl3.Name = "lbl3";
+            this.lbl3.Size = new System.Drawing.Size(0, 13);
+            this.lbl3.TabIndex = 12;
+            this.lbl3.Click += new System.EventHandler(this.lbl3_Click);
+            // 
+            // lbl2
+            // 
+            this.lbl2.AutoSize = true;
+            this.lbl2.Location = new System.Drawing.Point(261, 90);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(0, 13);
+            this.lbl2.TabIndex = 11;
+            // 
+            // lblp1
+            // 
+            this.lblp1.AutoSize = true;
+            this.lblp1.Location = new System.Drawing.Point(261, 46);
+            this.lblp1.Name = "lblp1";
+            this.lblp1.Size = new System.Drawing.Size(0, 13);
+            this.lblp1.TabIndex = 10;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Khaki;
+            this.groupBox2.Location = new System.Drawing.Point(376, 70);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(78, 66);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "P1";
+            this.groupBox2.Visible = false;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "Yoshi",
+            "Mario",
+            "Luigi",
+            "Peach",
+            "Bowser",
+            "Koopa",
+            "Toad",
+            "DK"});
+            this.comboBox4.Location = new System.Drawing.Point(121, 175);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(134, 21);
+            this.comboBox4.TabIndex = 9;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Yoshi",
+            "Mario",
+            "Luigi",
+            "Peach",
+            "Bowser",
+            "Koopa",
+            "Toad",
+            "DK"});
+            this.comboBox3.Location = new System.Drawing.Point(121, 131);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(134, 21);
+            this.comboBox3.TabIndex = 8;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Yoshi",
+            "Mario",
+            "Luigi",
+            "Peach",
+            "Bowser",
+            "Koopa",
+            "Toad",
+            "DK"});
+            this.comboBox2.Location = new System.Drawing.Point(121, 87);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(134, 21);
+            this.comboBox2.TabIndex = 7;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Yoshi",
+            "Mario",
+            "Luigi",
+            "Peach",
+            "Bowser",
+            "Koopa",
+            "Toad",
+            "DK"});
+            this.comboBox1.Location = new System.Drawing.Point(121, 43);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(134, 21);
+            this.comboBox1.TabIndex = 6;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // lblpersonagem4
+            // 
+            this.lblpersonagem4.AutoSize = true;
+            this.lblpersonagem4.Location = new System.Drawing.Point(25, 178);
+            this.lblpersonagem4.Name = "lblpersonagem4";
+            this.lblpersonagem4.Size = new System.Drawing.Size(78, 13);
+            this.lblpersonagem4.TabIndex = 5;
+            this.lblpersonagem4.Text = "Personagem 4:";
+            this.lblpersonagem4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // lblpersonagem2
+            // 
+            this.lblpersonagem2.AutoSize = true;
+            this.lblpersonagem2.Location = new System.Drawing.Point(25, 90);
+            this.lblpersonagem2.Name = "lblpersonagem2";
+            this.lblpersonagem2.Size = new System.Drawing.Size(78, 13);
+            this.lblpersonagem2.TabIndex = 4;
+            this.lblpersonagem2.Text = "Personagem 2:";
+            this.lblpersonagem2.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // lblpersonagem3
+            // 
+            this.lblpersonagem3.AutoSize = true;
+            this.lblpersonagem3.Location = new System.Drawing.Point(25, 134);
+            this.lblpersonagem3.Name = "lblpersonagem3";
+            this.lblpersonagem3.Size = new System.Drawing.Size(78, 13);
+            this.lblpersonagem3.TabIndex = 3;
+            this.lblpersonagem3.Text = "Personagem 3:";
+            this.lblpersonagem3.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // lblpersonagem1
+            // 
+            this.lblpersonagem1.AutoSize = true;
+            this.lblpersonagem1.Location = new System.Drawing.Point(25, 46);
+            this.lblpersonagem1.Name = "lblpersonagem1";
+            this.lblpersonagem1.Size = new System.Drawing.Size(78, 13);
+            this.lblpersonagem1.TabIndex = 2;
+            this.lblpersonagem1.Text = "Personagem 1:";
+            this.lblpersonagem1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(321, 13);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(424, 244);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
             // 
             // btstart
             // 
@@ -165,150 +338,35 @@
             // 
             this.btreiniciar.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btreiniciar.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btreiniciar.Location = new System.Drawing.Point(6, 232);
+            this.btreiniciar.Location = new System.Drawing.Point(370, 232);
             this.btreiniciar.Name = "btreiniciar";
             this.btreiniciar.Size = new System.Drawing.Size(111, 25);
             this.btreiniciar.TabIndex = 0;
             this.btreiniciar.Text = "REINICIAR";
             this.btreiniciar.UseVisualStyleBackColor = false;
+            this.btreiniciar.Click += new System.EventHandler(this.btreiniciar_Click);
             // 
-            // pictureBox3
+            // Contagem
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(321, 13);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(424, 244);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // lblpersonagem1
-            // 
-            this.lblpersonagem1.AutoSize = true;
-            this.lblpersonagem1.Location = new System.Drawing.Point(25, 46);
-            this.lblpersonagem1.Name = "lblpersonagem1";
-            this.lblpersonagem1.Size = new System.Drawing.Size(78, 13);
-            this.lblpersonagem1.TabIndex = 2;
-            this.lblpersonagem1.Text = "Personagem 1:";
-            this.lblpersonagem1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lblpersonagem3
-            // 
-            this.lblpersonagem3.AutoSize = true;
-            this.lblpersonagem3.Location = new System.Drawing.Point(25, 134);
-            this.lblpersonagem3.Name = "lblpersonagem3";
-            this.lblpersonagem3.Size = new System.Drawing.Size(78, 13);
-            this.lblpersonagem3.TabIndex = 3;
-            this.lblpersonagem3.Text = "Personagem 3:";
-            this.lblpersonagem3.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // lblpersonagem2
-            // 
-            this.lblpersonagem2.AutoSize = true;
-            this.lblpersonagem2.Location = new System.Drawing.Point(25, 90);
-            this.lblpersonagem2.Name = "lblpersonagem2";
-            this.lblpersonagem2.Size = new System.Drawing.Size(78, 13);
-            this.lblpersonagem2.TabIndex = 4;
-            this.lblpersonagem2.Text = "Personagem 2:";
-            this.lblpersonagem2.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // lblpersonagem4
-            // 
-            this.lblpersonagem4.AutoSize = true;
-            this.lblpersonagem4.Location = new System.Drawing.Point(25, 178);
-            this.lblpersonagem4.Name = "lblpersonagem4";
-            this.lblpersonagem4.Size = new System.Drawing.Size(78, 13);
-            this.lblpersonagem4.TabIndex = 5;
-            this.lblpersonagem4.Text = "Personagem 4:";
-            this.lblpersonagem4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Yoshi",
-            "Mario",
-            "Luigi",
-            "Peach",
-            "Bowser",
-            "Koopa",
-            "Toad",
-            "DK"});
-            this.comboBox1.Location = new System.Drawing.Point(121, 43);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(134, 21);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Yoshi",
-            "Mario",
-            "Luigi",
-            "Peach",
-            "Bowser",
-            "Koopa",
-            "Toad",
-            "DK"});
-            this.comboBox2.Location = new System.Drawing.Point(121, 87);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(134, 21);
-            this.comboBox2.TabIndex = 7;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Yoshi",
-            "Mario",
-            "Luigi",
-            "Peach",
-            "Bowser",
-            "Koopa",
-            "Toad",
-            "DK"});
-            this.comboBox3.Location = new System.Drawing.Point(121, 131);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(134, 21);
-            this.comboBox3.TabIndex = 8;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "Yoshi",
-            "Mario",
-            "Luigi",
-            "Peach",
-            "Bowser",
-            "Koopa",
-            "Toad",
-            "DK"});
-            this.comboBox4.Location = new System.Drawing.Point(121, 175);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(134, 21);
-            this.comboBox4.TabIndex = 9;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.Khaki;
-            this.groupBox2.Location = new System.Drawing.Point(376, 70);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(78, 66);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "P1";
-            this.groupBox2.Visible = false;
+            this.Contagem.AutoSize = true;
+            this.Contagem.BackColor = System.Drawing.Color.Transparent;
+            this.Contagem.Font = new System.Drawing.Font("MV Boli", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Contagem.Location = new System.Drawing.Point(547, 111);
+            this.Contagem.Name = "Contagem";
+            this.Contagem.Size = new System.Drawing.Size(185, 125);
+            this.Contagem.TabIndex = 8;
+            this.Contagem.Text = "03";
+            this.Contagem.Visible = false;
+            this.Contagem.Click += new System.EventHandler(this.Contagem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 632);
+            this.Controls.Add(this.Contagem);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.Selecao);
+            this.Controls.Add(this.Gruposelecao);
             this.Controls.Add(this.p4);
             this.Controls.Add(this.p3);
             this.Controls.Add(this.p1);
@@ -323,11 +381,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.p1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.p3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.p4)).EndInit();
-            this.Selecao.ResumeLayout(false);
-            this.Selecao.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
+            this.Gruposelecao.ResumeLayout(false);
+            this.Gruposelecao.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -339,7 +398,7 @@
         private System.Windows.Forms.PictureBox p1;
         private System.Windows.Forms.PictureBox p3;
         private System.Windows.Forms.PictureBox p4;
-        private System.Windows.Forms.GroupBox Selecao;
+        private System.Windows.Forms.GroupBox Gruposelecao;
         private System.Windows.Forms.Button btstart;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btreiniciar;
@@ -353,6 +412,11 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label Contagem;
+        private System.Windows.Forms.Label lblp1;
+        private System.Windows.Forms.Label lbl4;
+        private System.Windows.Forms.Label lbl3;
+        private System.Windows.Forms.Label lbl2;
     }
 }
 
