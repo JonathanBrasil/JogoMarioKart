@@ -9,10 +9,15 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MarioKart
 {
     public partial class Form1 : Form
     {
+        //CONTADOR REGRESSIVO
+        int regressivo = 3;
+
+
         Personagem Personagem1;
         Personagem Personagem2;
         Personagem Personagem3;
@@ -86,11 +91,18 @@ namespace MarioKart
 
         }
 
-        private void btstart_Click(object sender, EventArgs e)
+        private async void btstart_Click(object sender, EventArgs e)
         {
-            int winner;
+            //CONTADOR NA TELA
+            Contagem.Visible = true;
+            timer1.Enabled = true;
+            Contagem.Text = Convert.ToString(regressivo);
+            
+            
+           
             string nome1, nome2, nome3, nome4;
 
+            await Task.Delay(4000);
 
 
             //DEFININDO A SELECAO DE PERSONAGEM
@@ -104,8 +116,6 @@ namespace MarioKart
             lbl3.Text = nome3;
             lbl4.Text = nome4;
 
-            //AGUARDANDO CONTADOR
-            //Thread.Sleep(3000);
 
             //DESABILITANDO TELA DE VENCEDOR
             groupBox1.Visible = false;
@@ -135,23 +145,26 @@ namespace MarioKart
             }
             if(Personagem1.Correr() == true)
             {
-                winner = 1;
-                //fazer com que a tela de vitoria apresente o personagem com msg de vitoria
+                
+                lblvencedor.Text = nome1; //nome do vencedor na tela
+                
             }
             else if(Personagem2.Correr() == true)
             {
-                winner = 2;
+                
+                lblvencedor.Text = nome2; //nome do vencedor na tela
             }
             else if(Personagem3.Correr() == true)
             {
-                winner = 3;
+                 
+                lblvencedor.Text = nome3; //nome do vencedor na tela
             }
             else if(Personagem4.Correr() == true)
             {
-                winner = 4;
+                
+                lblvencedor.Text = nome4; //nome do vencedor na tela
             }
 
-      
             p1.Visible = false;
             p2.Visible = false;
             p3.Visible = false;
@@ -166,7 +179,13 @@ namespace MarioKart
             //REABILITANDO A SELECAO DE PERSONAGEM
             Gruposelecao.Enabled = true;
             pictureBox3.Enabled = true;
-          
+
+            //DESABILITANDO TELA DE VENCEDOR
+            groupBox1.Visible = false;
+
+            //CONTADOR REINICIADO
+            regressivo = 3;
+        
         }
 
         private void pictureBox1_Click_2(object sender, EventArgs e)
@@ -182,6 +201,54 @@ namespace MarioKart
         private void lbl3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            bandeira.Visible = false;
+     
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lblvencedor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void timer1_Tick_1(object sender, EventArgs e)
+        {
+            regressivo = regressivo - 1;
+            Contagem.Text = Convert.ToString(regressivo);
+            if(regressivo == 0 ) 
+            {
+                timer1.Enabled = false;
+                bandeira.Visible = true;
+                Contagem.Visible = false;
+
+                await Task.Delay(2000);
+                bandeira.Visible = false;
+
+
+            }
         }
     }
 }
