@@ -63,6 +63,7 @@
             this.bandeira = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.picwinner = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p2)).BeginInit();
@@ -74,6 +75,7 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxwinner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandeira)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picwinner)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -100,6 +102,7 @@
             this.p2.Location = new System.Drawing.Point(40, 111);
             this.p2.Name = "p2";
             this.p2.Size = new System.Drawing.Size(56, 56);
+            this.p2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.p2.TabIndex = 2;
             this.p2.TabStop = false;
             this.p2.Visible = false;
@@ -110,6 +113,7 @@
             this.p1.Location = new System.Drawing.Point(40, 35);
             this.p1.Name = "p1";
             this.p1.Size = new System.Drawing.Size(56, 56);
+            this.p1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.p1.TabIndex = 3;
             this.p1.TabStop = false;
             this.p1.Visible = false;
@@ -119,6 +123,7 @@
             this.p3.Location = new System.Drawing.Point(40, 187);
             this.p3.Name = "p3";
             this.p3.Size = new System.Drawing.Size(56, 56);
+            this.p3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.p3.TabIndex = 4;
             this.p3.TabStop = false;
             this.p3.Visible = false;
@@ -128,6 +133,7 @@
             this.p4.Location = new System.Drawing.Point(40, 263);
             this.p4.Name = "p4";
             this.p4.Size = new System.Drawing.Size(56, 56);
+            this.p4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.p4.TabIndex = 5;
             this.p4.TabStop = false;
             this.p4.Visible = false;
@@ -336,6 +342,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.picwinner);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lblvencedor);
@@ -352,9 +359,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe Print", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe Print", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(66, 163);
+            this.label2.Location = new System.Drawing.Point(161, 198);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 65);
             this.label2.TabIndex = 4;
@@ -367,7 +374,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(14, 33);
+            this.label1.Location = new System.Drawing.Point(14, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(257, 65);
             this.label1.TabIndex = 3;
@@ -380,7 +387,7 @@
             this.lblvencedor.BackColor = System.Drawing.SystemColors.Control;
             this.lblvencedor.Font = new System.Drawing.Font("Segoe Print", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblvencedor.ForeColor = System.Drawing.Color.Gold;
-            this.lblvencedor.Location = new System.Drawing.Point(124, 98);
+            this.lblvencedor.Location = new System.Drawing.Point(14, 198);
             this.lblvencedor.Name = "lblvencedor";
             this.lblvencedor.Size = new System.Drawing.Size(37, 65);
             this.lblvencedor.TabIndex = 2;
@@ -454,6 +461,16 @@
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // picwinner
+            // 
+            this.picwinner.BackColor = System.Drawing.Color.Transparent;
+            this.picwinner.Location = new System.Drawing.Point(79, 87);
+            this.picwinner.Name = "picwinner";
+            this.picwinner.Size = new System.Drawing.Size(125, 125);
+            this.picwinner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picwinner.TabIndex = 5;
+            this.picwinner.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -486,6 +503,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxwinner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandeira)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picwinner)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -526,6 +544,7 @@
         private System.Windows.Forms.PictureBox bandeira;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.PictureBox picwinner;
     }
 }
 

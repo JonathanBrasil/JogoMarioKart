@@ -97,12 +97,17 @@ namespace MarioKart
 
         private async void btstart_Click(object sender, EventArgs e)
         {
+            btstart.Enabled = false;
+            //Pequeno delay após apertar start. 
+            await Task.Delay(1500);
+
             //CONTADOR NA TELA
             Contagem.Visible = true;
             timer1.Enabled = true;
             Contagem.Text = Convert.ToString(regressivo);           
            
-            string nome1, nome2, nome3, nome4;
+            string nome1, nome2, nome3, nome4, winner;
+            winner = "";
 
             //DEFININDO A SELECAO DE PERSONAGEM
             nome1 = Convert.ToString(comboBox1.SelectedItem);
@@ -115,13 +120,20 @@ namespace MarioKart
             lbl3.Text = nome3;
             lbl4.Text = nome4;
 
+            //CARREGANDO IMG DEPOIS DA SELEÇÃO
+
+            p1.Load(@"D:\Jonathan\Documents\CORRIDA\img\personagens\" + nome1 +".png");
+            p2.Load(@"D:\Jonathan\Documents\CORRIDA\img\personagens\" + nome2 + ".png");
+            p3.Load(@"D:\Jonathan\Documents\CORRIDA\img\personagens\" + nome3 + ".png");
+            p4.Load(@"D:\Jonathan\Documents\CORRIDA\img\personagens\" + nome4 + ".png");
+
 
             //DESABILITANDO TELA DE VENCEDOR
             groupBox1.Visible = false;
 
             //DESABILITANDO TELA DE SELECAO
-            pictureBox3.Enabled = false;
-            Gruposelecao.Enabled = false;
+            pictureBox3.Visible = false;
+            Gruposelecao.Visible = false;
          
             //DEIXANDO OS PERSONAGENS VISIVEIS AO INICIAR A CORRIDA
             p1.Visible = true;
@@ -155,22 +167,25 @@ namespace MarioKart
             {
                 
                 lblvencedor.Text = nome1; //nome do vencedor na tela
-                
+                winner = nome1;
             }
             else if(Personagem2.Correr() == true)
             {
                 
                 lblvencedor.Text = nome2; //nome do vencedor na tela
+                winner = nome2;
             }
             else if(Personagem3.Correr() == true)
             {
                  
                 lblvencedor.Text = nome3; //nome do vencedor na tela
+                winner = nome3;
             }
             else if(Personagem4.Correr() == true)
             {
                 
                 lblvencedor.Text = nome4; //nome do vencedor na tela
+                winner = nome4;
             }
 
             timer2.Stop();
@@ -180,8 +195,14 @@ namespace MarioKart
             p3.Visible = false;
             p4.Visible = false;
 
+            picwinner.Load(url: @"D:\Jonathan\Documents\CORRIDA\img\personagens\"
+                                + winner
+                                + ".png");
+
+
             //HABILITANDO TELA DE VENCEDOR
             groupBox1.Visible = true;
+
         }
 
         private void btreiniciar_Click(object sender, EventArgs e)
@@ -194,15 +215,22 @@ namespace MarioKart
             lbltempo.Text = $"0{mm}:0{ss}:{ff}";
 
             //REABILITANDO A SELECAO DE PERSONAGEM
-            Gruposelecao.Enabled = true;
-            pictureBox3.Enabled = true;
+            Gruposelecao.Visible = true;
+            pictureBox3.Visible = true;
+            btstart.Enabled = true;
+
+            //RESETANDO NOMES SELECIONADOS
+            lblp1.Text = "";
+            lbl2.Text = "";
+            lbl3.Text = "";
+            lbl4.Text = "";
 
             //DESABILITANDO TELA DE VENCEDOR
             groupBox1.Visible = false;
 
             //CONTADOR REINICIADO
-            regressivo = 3;
-        
+            regressivo = 3; 
+
         }
 
         private void pictureBox1_Click_2(object sender, EventArgs e)
