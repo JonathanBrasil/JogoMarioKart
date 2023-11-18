@@ -10,10 +10,10 @@ A base do código utilizado tem bastante referência nesse video do YouTube, do 
 A versão final terá incrementos como tela de vencedor e tela de seleção de personagens que irei adicionar aos poucos. 
 
 
-## Screenshots
+## Jogo Funcionando 🏁🏎️🏁
 
-![App Screenshot](https://imgur.com/OpO52nC.png)
-![App Screenshot](https://i.imgur.com/4mY2kyT.png)
+![Programa-Corrida](https://github.com/JonathanBrasil/JogoMarioKart/assets/102044259/c14ab7bb-9540-4ba9-b744-8fcaa1ddf313)
+
 
 
 ## Features 🧑🏾‍💻✅🚀
@@ -23,10 +23,11 @@ A versão final terá incrementos como tela de vencedor e tela de seleção de p
 - [x]Definir Vencedor
 - [x]Contagem Regressiva antes de começar corrida
 - [x]Tela de vencedor com personagem
-- [ ]cronometro da partida
+- [x]Colocar personagens escolhidos para correr
+- [x]cronometro da partida
 - [ ]Sistema de Seleção de Personagens - PROGRESSO
-- [ ]Colocar personagens escolhidos para correr
 - [ ]Sistema para não permitir personagens repetidos
+- [ ]Colocar música
 
 ## Problemas ❌⚠️🐞
 - Após reiniciar a corrida não recomeça.
