@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace MarioKart
@@ -90,22 +91,68 @@ namespace MarioKart
 
         }
 
+        // AJUSTE DE SELECTION E COMBOX
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //Ao selecionar p1, habilita p2 e remove a opção do selection
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = true;  
+            comboBox2.Items.Remove(comboBox1.SelectedItem);
+
+            string nome1 = Convert.ToString(comboBox1.SelectedItem);
+            lblp1.Text = nome1;
+
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox2.Enabled = false;
+            comboBox3.Enabled = true;
+            comboBox3.Items.Remove(comboBox1.SelectedItem);
+            comboBox3.Items.Remove(comboBox2.SelectedItem);
+
+            string nome1 = Convert.ToString(comboBox2.SelectedItem);
+            lbl2.Text = nome1;
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox3.Enabled = false;
+            comboBox4.Enabled = true;
+            comboBox4.Items.Remove(comboBox1.SelectedItem);
+            comboBox4.Items.Remove(comboBox2.SelectedItem);
+            comboBox4.Items.Remove(comboBox3.SelectedItem);
+
+            string nome1 = Convert.ToString(comboBox3.SelectedItem);
+            lbl3.Text = nome1;
+
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox4.Enabled = false;
+            btstart.Enabled = true; //HABILITA BT START SOMENTE APOS A SELECAO DOS 4 PERSONAGENS
+
+            string nome1 = Convert.ToString(comboBox4.SelectedItem);
+            lbl4.Text = nome1;
 
         }
 
         private async void btstart_Click(object sender, EventArgs e)
         {
+            //DESABILITA BT START
             btstart.Enabled = false;
-            //Pequeno delay após apertar start. 
-            await Task.Delay(1500);
 
-            //CONTADOR NA TELA
-            Contagem.Visible = true;
-            timer1.Enabled = true;
-            Contagem.Text = Convert.ToString(regressivo);           
-           
+            //DESABILITANDO TELA DE VENCEDOR
+            groupBox1.Visible = false;
+
+            //DESABILITANDO TELA DE SELECAO
+            pictureBox3.Visible = false;
+            Gruposelecao.Visible = false;
+
             string nome1, nome2, nome3, nome4, winner;
             winner = "";
 
@@ -115,43 +162,36 @@ namespace MarioKart
             nome3 = Convert.ToString(comboBox3.SelectedItem);
             nome4 = Convert.ToString(comboBox4.SelectedItem);
 
-            lblp1.Text = nome1;
-            lbl2.Text = nome2;
-            lbl3.Text = nome3;
-            lbl4.Text = nome4;
-
             //CARREGANDO IMG DEPOIS DA SELEÇÃO
-
-            p1.Load(@"D:\Jonathan\Documents\CORRIDA\img\personagens\" + nome1 +".png");
+            p1.Load(@"D:\Jonathan\Documents\CORRIDA\img\personagens\" + nome1 + ".png");
             p2.Load(@"D:\Jonathan\Documents\CORRIDA\img\personagens\" + nome2 + ".png");
             p3.Load(@"D:\Jonathan\Documents\CORRIDA\img\personagens\" + nome3 + ".png");
             p4.Load(@"D:\Jonathan\Documents\CORRIDA\img\personagens\" + nome4 + ".png");
 
-
-            //DESABILITANDO TELA DE VENCEDOR
-            groupBox1.Visible = false;
-
-            //DESABILITANDO TELA DE SELECAO
-            pictureBox3.Visible = false;
-            Gruposelecao.Visible = false;
-         
             //DEIXANDO OS PERSONAGENS VISIVEIS AO INICIAR A CORRIDA
             p1.Visible = true;
             p2.Visible = true;
             p3.Visible = true;
             p4.Visible = true;
 
-            //DESABILITANDO A SELEÇÃO DE PERSONAGENS DURANTE A CORRIDA
-            comboBox1.SelectedIndex = -1;
-            comboBox2.SelectedIndex = -1;
-            comboBox3.SelectedIndex = -1;
-            comboBox4.SelectedIndex = -1;
 
 
+            //DELAY
+            await Task.Delay(1500);
 
-            //COMECANDO CORRIDA
+            //CONTADOR NA TELA HABILITADO
+            Contagem.Visible = true;
+            timer1.Enabled = true;
+            Contagem.Text = Convert.ToString(regressivo);
 
-            //TEMPO DE CORRIDA
+            lblp1.Text = nome1;
+            lbl2.Text = nome2;
+            lbl3.Text = nome3;
+            lbl4.Text = nome4;
+
+            //********COMECANDO CORRIDA************//
+
+            //TEMPORIZADOR DA CORRIDA
             await Task.Delay(4000);
             timer2.Enabled = true;
             timer2.Start();
@@ -214,10 +254,28 @@ namespace MarioKart
             ff = 0;
             lbltempo.Text = $"0{mm}:0{ss}:{ff}";
 
+            //RETORNANDO POSICAO INICIAL DOS CARROS
+            Personagem1.VoltarPosicaoInicial();
+            Personagem2.VoltarPosicaoInicial();
+            Personagem3.VoltarPosicaoInicial();
+            Personagem4.VoltarPosicaoInicial();
+
             //REABILITANDO A SELECAO DE PERSONAGEM
             Gruposelecao.Visible = true;
             pictureBox3.Visible = true;
-            btstart.Enabled = true;
+            comboBox1.Enabled = true;
+            comboBox2.Enabled = false;
+            comboBox3.Enabled = false;
+            comboBox4.Enabled = false;
+
+            //restaurando items da combobox apos reiniciar
+            comboBox2.Items.Clear();
+            comboBox2.Items.AddRange(comboBox1.Items.Cast<Object>().ToArray()); //Converte os items da combobox1 em array e adiciona na combobox2
+            comboBox3.Items.Clear();
+            comboBox3.Items.AddRange(comboBox1.Items.Cast<Object>().ToArray());
+            comboBox4.Items.Clear();
+            comboBox4.Items.AddRange(comboBox1.Items.Cast<Object>().ToArray());
+
 
             //RESETANDO NOMES SELECIONADOS
             lblp1.Text = "";
@@ -233,44 +291,13 @@ namespace MarioKart
 
         }
 
-        private void pictureBox1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Contagem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             bandeira.Visible = false;
-     
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void lblvencedor_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_2(object sender, EventArgs e)
-        {
+            comboBox2.Enabled = false;
+            comboBox3.Enabled = false;
+            comboBox4.Enabled = false;
+            btstart.Enabled = false;
 
         }
 
@@ -289,11 +316,6 @@ namespace MarioKart
                 ss = 0;
             }
             lbltempo.Text = $"0{mm}:{ss}:0{ff}";
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private async void timer1_Tick_1(object sender, EventArgs e)

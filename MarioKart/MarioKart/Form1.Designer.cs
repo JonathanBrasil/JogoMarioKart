@@ -41,7 +41,6 @@
             this.lbl3 = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
             this.lblp1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -53,6 +52,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btstart = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.picwinner = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblvencedor = new System.Windows.Forms.Label();
@@ -63,7 +63,6 @@
             this.bandeira = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.picwinner = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p2)).BeginInit();
@@ -73,9 +72,9 @@
             this.Gruposelecao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picwinner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxwinner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandeira)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picwinner)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -99,6 +98,7 @@
             // 
             // p2
             // 
+            this.p2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.p2.Location = new System.Drawing.Point(40, 111);
             this.p2.Name = "p2";
             this.p2.Size = new System.Drawing.Size(56, 56);
@@ -109,7 +109,7 @@
             // 
             // p1
             // 
-            this.p1.BackColor = System.Drawing.Color.Transparent;
+            this.p1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.p1.Location = new System.Drawing.Point(40, 35);
             this.p1.Name = "p1";
             this.p1.Size = new System.Drawing.Size(56, 56);
@@ -120,6 +120,7 @@
             // 
             // p3
             // 
+            this.p3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.p3.Location = new System.Drawing.Point(40, 187);
             this.p3.Name = "p3";
             this.p3.Size = new System.Drawing.Size(56, 56);
@@ -130,6 +131,7 @@
             // 
             // p4
             // 
+            this.p4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.p4.Location = new System.Drawing.Point(40, 263);
             this.p4.Name = "p4";
             this.p4.Size = new System.Drawing.Size(56, 56);
@@ -145,7 +147,6 @@
             this.Gruposelecao.Controls.Add(this.lbl3);
             this.Gruposelecao.Controls.Add(this.lbl2);
             this.Gruposelecao.Controls.Add(this.lblp1);
-            this.Gruposelecao.Controls.Add(this.groupBox2);
             this.Gruposelecao.Controls.Add(this.comboBox4);
             this.Gruposelecao.Controls.Add(this.comboBox3);
             this.Gruposelecao.Controls.Add(this.comboBox2);
@@ -179,7 +180,6 @@
             this.lbl3.Name = "lbl3";
             this.lbl3.Size = new System.Drawing.Size(0, 13);
             this.lbl3.TabIndex = 12;
-            this.lbl3.Click += new System.EventHandler(this.lbl3_Click);
             // 
             // lbl2
             // 
@@ -197,17 +197,6 @@
             this.lblp1.Size = new System.Drawing.Size(0, 13);
             this.lblp1.TabIndex = 10;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.Khaki;
-            this.groupBox2.Location = new System.Drawing.Point(376, 70);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(78, 66);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "P1";
-            this.groupBox2.Visible = false;
-            // 
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
@@ -224,6 +213,7 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(134, 21);
             this.comboBox4.TabIndex = 9;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // comboBox3
             // 
@@ -241,6 +231,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(134, 21);
             this.comboBox3.TabIndex = 8;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -258,6 +249,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(134, 21);
             this.comboBox2.TabIndex = 7;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -331,7 +323,7 @@
             // 
             this.btstart.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btstart.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btstart.Location = new System.Drawing.Point(28, 232);
+            this.btstart.Location = new System.Drawing.Point(154, 227);
             this.btstart.Name = "btstart";
             this.btstart.Size = new System.Drawing.Size(101, 25);
             this.btstart.TabIndex = 0;
@@ -356,6 +348,16 @@
             this.groupBox1.Text = "Vencedor";
             this.groupBox1.Visible = false;
             // 
+            // picwinner
+            // 
+            this.picwinner.BackColor = System.Drawing.Color.Transparent;
+            this.picwinner.Location = new System.Drawing.Point(79, 87);
+            this.picwinner.Name = "picwinner";
+            this.picwinner.Size = new System.Drawing.Size(125, 125);
+            this.picwinner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picwinner.TabIndex = 5;
+            this.picwinner.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -366,7 +368,6 @@
             this.label2.Size = new System.Drawing.Size(152, 65);
             this.label2.TabIndex = 4;
             this.label2.Text = "venceu";
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // label1
             // 
@@ -379,7 +380,6 @@
             this.label1.Size = new System.Drawing.Size(257, 65);
             this.label1.TabIndex = 3;
             this.label1.Text = "PARABÉNS!";
-            this.label1.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // lblvencedor
             // 
@@ -393,7 +393,6 @@
             this.lblvencedor.TabIndex = 2;
             this.lblvencedor.Text = ".";
             this.lblvencedor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblvencedor.Click += new System.EventHandler(this.lblvencedor_Click);
             // 
             // pictureboxwinner
             // 
@@ -428,7 +427,6 @@
             this.Contagem.TabIndex = 8;
             this.Contagem.Text = "03";
             this.Contagem.Visible = false;
-            this.Contagem.Click += new System.EventHandler(this.Contagem_Click);
             // 
             // lbltempo
             // 
@@ -439,7 +437,6 @@
             this.lbltempo.Size = new System.Drawing.Size(88, 24);
             this.lbltempo.TabIndex = 9;
             this.lbltempo.Text = "00:00:00";
-            this.lbltempo.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // bandeira
             // 
@@ -460,16 +457,6 @@
             // timer2
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // picwinner
-            // 
-            this.picwinner.BackColor = System.Drawing.Color.Transparent;
-            this.picwinner.Location = new System.Drawing.Point(79, 87);
-            this.picwinner.Name = "picwinner";
-            this.picwinner.Size = new System.Drawing.Size(125, 125);
-            this.picwinner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picwinner.TabIndex = 5;
-            this.picwinner.TabStop = false;
             // 
             // Form1
             // 
@@ -501,9 +488,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picwinner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxwinner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandeira)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picwinner)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -530,7 +517,6 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label Contagem;
         private System.Windows.Forms.Label lblp1;
         private System.Windows.Forms.Label lbl4;
