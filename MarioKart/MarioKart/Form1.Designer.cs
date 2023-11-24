@@ -37,6 +37,10 @@
             this.p3 = new System.Windows.Forms.PictureBox();
             this.p4 = new System.Windows.Forms.PictureBox();
             this.Gruposelecao = new System.Windows.Forms.GroupBox();
+            this.picPersonagem4 = new System.Windows.Forms.PictureBox();
+            this.picPersonagem3 = new System.Windows.Forms.PictureBox();
+            this.picPersonagem2 = new System.Windows.Forms.PictureBox();
+            this.picPersonagem1 = new System.Windows.Forms.PictureBox();
             this.lbl4 = new System.Windows.Forms.Label();
             this.lbl3 = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
@@ -70,6 +74,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.p3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p4)).BeginInit();
             this.Gruposelecao.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPersonagem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPersonagem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPersonagem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPersonagem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picwinner)).BeginInit();
@@ -143,6 +151,10 @@
             // Gruposelecao
             // 
             this.Gruposelecao.BackColor = System.Drawing.Color.Transparent;
+            this.Gruposelecao.Controls.Add(this.picPersonagem4);
+            this.Gruposelecao.Controls.Add(this.picPersonagem3);
+            this.Gruposelecao.Controls.Add(this.picPersonagem2);
+            this.Gruposelecao.Controls.Add(this.picPersonagem1);
             this.Gruposelecao.Controls.Add(this.lbl4);
             this.Gruposelecao.Controls.Add(this.lbl3);
             this.Gruposelecao.Controls.Add(this.lbl2);
@@ -159,43 +171,83 @@
             this.Gruposelecao.Controls.Add(this.btstart);
             this.Gruposelecao.Location = new System.Drawing.Point(12, 357);
             this.Gruposelecao.Name = "Gruposelecao";
-            this.Gruposelecao.Size = new System.Drawing.Size(747, 263);
+            this.Gruposelecao.Size = new System.Drawing.Size(1254, 263);
             this.Gruposelecao.TabIndex = 6;
             this.Gruposelecao.TabStop = false;
             this.Gruposelecao.Text = "Seleção de Personagem";
             this.Gruposelecao.Enter += new System.EventHandler(this.Selecao_Enter);
             // 
+            // picPersonagem4
+            // 
+            this.picPersonagem4.Location = new System.Drawing.Point(700, 57);
+            this.picPersonagem4.Name = "picPersonagem4";
+            this.picPersonagem4.Size = new System.Drawing.Size(104, 113);
+            this.picPersonagem4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPersonagem4.TabIndex = 16;
+            this.picPersonagem4.TabStop = false;
+            // 
+            // picPersonagem3
+            // 
+            this.picPersonagem3.Location = new System.Drawing.Point(576, 57);
+            this.picPersonagem3.Name = "picPersonagem3";
+            this.picPersonagem3.Size = new System.Drawing.Size(104, 113);
+            this.picPersonagem3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPersonagem3.TabIndex = 15;
+            this.picPersonagem3.TabStop = false;
+            // 
+            // picPersonagem2
+            // 
+            this.picPersonagem2.Location = new System.Drawing.Point(452, 57);
+            this.picPersonagem2.Name = "picPersonagem2";
+            this.picPersonagem2.Size = new System.Drawing.Size(104, 113);
+            this.picPersonagem2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPersonagem2.TabIndex = 14;
+            this.picPersonagem2.TabStop = false;
+            // 
+            // picPersonagem1
+            // 
+            this.picPersonagem1.Location = new System.Drawing.Point(328, 57);
+            this.picPersonagem1.Name = "picPersonagem1";
+            this.picPersonagem1.Size = new System.Drawing.Size(104, 113);
+            this.picPersonagem1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPersonagem1.TabIndex = 11;
+            this.picPersonagem1.TabStop = false;
+            // 
             // lbl4
             // 
             this.lbl4.AutoSize = true;
-            this.lbl4.Location = new System.Drawing.Point(261, 178);
+            this.lbl4.Location = new System.Drawing.Point(735, 188);
             this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(0, 13);
+            this.lbl4.Size = new System.Drawing.Size(16, 13);
             this.lbl4.TabIndex = 13;
+            this.lbl4.Text = "...";
             // 
             // lbl3
             // 
             this.lbl3.AutoSize = true;
-            this.lbl3.Location = new System.Drawing.Point(261, 134);
+            this.lbl3.Location = new System.Drawing.Point(611, 188);
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(0, 13);
+            this.lbl3.Size = new System.Drawing.Size(16, 13);
             this.lbl3.TabIndex = 12;
+            this.lbl3.Text = "...";
             // 
             // lbl2
             // 
             this.lbl2.AutoSize = true;
-            this.lbl2.Location = new System.Drawing.Point(261, 90);
+            this.lbl2.Location = new System.Drawing.Point(496, 188);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(0, 13);
+            this.lbl2.Size = new System.Drawing.Size(16, 13);
             this.lbl2.TabIndex = 11;
+            this.lbl2.Text = "...";
             // 
             // lblp1
             // 
             this.lblp1.AutoSize = true;
-            this.lblp1.Location = new System.Drawing.Point(261, 46);
+            this.lblp1.Location = new System.Drawing.Point(372, 188);
             this.lblp1.Name = "lblp1";
-            this.lblp1.Size = new System.Drawing.Size(0, 13);
+            this.lblp1.Size = new System.Drawing.Size(16, 13);
             this.lblp1.TabIndex = 10;
+            this.lblp1.Text = "...";
             // 
             // comboBox4
             // 
@@ -209,7 +261,7 @@
             "Koopa",
             "Toad",
             "DK"});
-            this.comboBox4.Location = new System.Drawing.Point(121, 175);
+            this.comboBox4.Location = new System.Drawing.Point(127, 188);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(134, 21);
             this.comboBox4.TabIndex = 9;
@@ -227,7 +279,7 @@
             "Koopa",
             "Toad",
             "DK"});
-            this.comboBox3.Location = new System.Drawing.Point(121, 131);
+            this.comboBox3.Location = new System.Drawing.Point(127, 144);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(134, 21);
             this.comboBox3.TabIndex = 8;
@@ -245,7 +297,7 @@
             "Koopa",
             "Toad",
             "DK"});
-            this.comboBox2.Location = new System.Drawing.Point(121, 87);
+            this.comboBox2.Location = new System.Drawing.Point(127, 100);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(134, 21);
             this.comboBox2.TabIndex = 7;
@@ -263,7 +315,7 @@
             "Koopa",
             "Toad",
             "DK"});
-            this.comboBox1.Location = new System.Drawing.Point(121, 43);
+            this.comboBox1.Location = new System.Drawing.Point(127, 56);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(134, 21);
             this.comboBox1.TabIndex = 6;
@@ -272,7 +324,7 @@
             // lblpersonagem4
             // 
             this.lblpersonagem4.AutoSize = true;
-            this.lblpersonagem4.Location = new System.Drawing.Point(25, 178);
+            this.lblpersonagem4.Location = new System.Drawing.Point(31, 191);
             this.lblpersonagem4.Name = "lblpersonagem4";
             this.lblpersonagem4.Size = new System.Drawing.Size(78, 13);
             this.lblpersonagem4.TabIndex = 5;
@@ -282,7 +334,7 @@
             // lblpersonagem2
             // 
             this.lblpersonagem2.AutoSize = true;
-            this.lblpersonagem2.Location = new System.Drawing.Point(25, 90);
+            this.lblpersonagem2.Location = new System.Drawing.Point(31, 103);
             this.lblpersonagem2.Name = "lblpersonagem2";
             this.lblpersonagem2.Size = new System.Drawing.Size(78, 13);
             this.lblpersonagem2.TabIndex = 4;
@@ -292,7 +344,7 @@
             // lblpersonagem3
             // 
             this.lblpersonagem3.AutoSize = true;
-            this.lblpersonagem3.Location = new System.Drawing.Point(25, 134);
+            this.lblpersonagem3.Location = new System.Drawing.Point(31, 147);
             this.lblpersonagem3.Name = "lblpersonagem3";
             this.lblpersonagem3.Size = new System.Drawing.Size(78, 13);
             this.lblpersonagem3.TabIndex = 3;
@@ -302,7 +354,7 @@
             // lblpersonagem1
             // 
             this.lblpersonagem1.AutoSize = true;
-            this.lblpersonagem1.Location = new System.Drawing.Point(25, 46);
+            this.lblpersonagem1.Location = new System.Drawing.Point(31, 59);
             this.lblpersonagem1.Name = "lblpersonagem1";
             this.lblpersonagem1.Size = new System.Drawing.Size(78, 13);
             this.lblpersonagem1.TabIndex = 2;
@@ -312,9 +364,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(321, 13);
+            this.pictureBox3.Location = new System.Drawing.Point(878, 5);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(424, 244);
+            this.pictureBox3.Size = new System.Drawing.Size(370, 247);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
@@ -323,7 +375,7 @@
             // 
             this.btstart.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btstart.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btstart.Location = new System.Drawing.Point(154, 227);
+            this.btstart.Location = new System.Drawing.Point(514, 227);
             this.btstart.Name = "btstart";
             this.btstart.Size = new System.Drawing.Size(101, 25);
             this.btstart.TabIndex = 0;
@@ -340,7 +392,7 @@
             this.groupBox1.Controls.Add(this.lblvencedor);
             this.groupBox1.Controls.Add(this.pictureboxwinner);
             this.groupBox1.Controls.Add(this.btreiniciar);
-            this.groupBox1.Location = new System.Drawing.Point(779, 357);
+            this.groupBox1.Location = new System.Drawing.Point(403, 45);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(487, 263);
             this.groupBox1.TabIndex = 7;
@@ -485,6 +537,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.p4)).EndInit();
             this.Gruposelecao.ResumeLayout(false);
             this.Gruposelecao.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPersonagem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPersonagem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPersonagem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPersonagem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -531,6 +587,10 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.PictureBox picwinner;
+        private System.Windows.Forms.PictureBox picPersonagem1;
+        private System.Windows.Forms.PictureBox picPersonagem4;
+        private System.Windows.Forms.PictureBox picPersonagem3;
+        private System.Windows.Forms.PictureBox picPersonagem2;
     }
 }
 

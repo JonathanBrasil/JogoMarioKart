@@ -4,11 +4,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 
 namespace MarioKart
@@ -103,6 +106,10 @@ namespace MarioKart
             string nome1 = Convert.ToString(comboBox1.SelectedItem);
             lblp1.Text = nome1;
 
+            picPersonagem1.Load(url: @"D:\Jonathan\Documents\CORRIDA\img\personagens\frente"
+                                                                                      + nome1
+                                                                                      + ".png");
+
 
         }
 
@@ -115,6 +122,10 @@ namespace MarioKart
 
             string nome1 = Convert.ToString(comboBox2.SelectedItem);
             lbl2.Text = nome1;
+
+            picPersonagem2.Load(url: @"D:\Jonathan\Documents\CORRIDA\img\personagens\frente"
+                                                                                     + nome1
+                                                                                     + ".png");
 
         }
 
@@ -129,6 +140,10 @@ namespace MarioKart
             string nome1 = Convert.ToString(comboBox3.SelectedItem);
             lbl3.Text = nome1;
 
+            picPersonagem3.Load(url: @"D:\Jonathan\Documents\CORRIDA\img\personagens\frente"
+                                                                                     + nome1
+                                                                                     + ".png");
+
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -139,10 +154,14 @@ namespace MarioKart
             string nome1 = Convert.ToString(comboBox4.SelectedItem);
             lbl4.Text = nome1;
 
+            picPersonagem4.Load(url: @"D:\Jonathan\Documents\CORRIDA\img\personagens\frente"
+                                                                                      + nome1
+                                                                                      + ".png");
+
         }
 
         private async void btstart_Click(object sender, EventArgs e)
-        {
+        {           
             //DESABILITA BT START
             btstart.Enabled = false;
 
@@ -152,7 +171,7 @@ namespace MarioKart
             //DESABILITANDO TELA DE SELECAO
             pictureBox3.Visible = false;
             Gruposelecao.Visible = false;
-
+            
             string nome1, nome2, nome3, nome4, winner;
             winner = "";
 
@@ -196,6 +215,8 @@ namespace MarioKart
             timer2.Enabled = true;
             timer2.Start();
 
+            System.Media.SoundPlayer Player = new System.Media.SoundPlayer(@"D:\Jonathan\Documents\CORRIDA\Sound\Race.wav");
+            Player.Play();
 
 
             while (Personagem1.Correr() == false && Personagem2.Correr() == false && Personagem3.Correr() == false && Personagem4.Correr() == false)
@@ -235,7 +256,7 @@ namespace MarioKart
             p3.Visible = false;
             p4.Visible = false;
 
-            picwinner.Load(url: @"D:\Jonathan\Documents\CORRIDA\img\personagens\"
+            picwinner.Load(url: @"D:\Jonathan\Documents\CORRIDA\img\personagens\frente"
                                 + winner
                                 + ".png");
 
@@ -247,6 +268,10 @@ namespace MarioKart
 
         private void btreiniciar_Click(object sender, EventArgs e)
         {
+
+            System.Media.SoundPlayer Player = new System.Media.SoundPlayer(@"D:\Jonathan\Documents\CORRIDA\Sound\Menu.wav");
+            Player.Play();
+
             //reiniciando valor do cronometro
             timer2.Dispose();
             mm = 0;
@@ -299,6 +324,10 @@ namespace MarioKart
             comboBox4.Enabled = false;
             btstart.Enabled = false;
 
+            System.Media.SoundPlayer Player = new System.Media.SoundPlayer(@"D:\Jonathan\Documents\CORRIDA\Sound\Menu.wav");
+            Player.Play();
+
+
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -320,6 +349,9 @@ namespace MarioKart
 
         private async void timer1_Tick_1(object sender, EventArgs e)
         {
+            System.Media.SoundPlayer Player = new System.Media.SoundPlayer(@"D:\Jonathan\Documents\CORRIDA\Sound\chord.wav");
+            Player.Play();
+
             regressivo = regressivo - 1;
             Contagem.Text = Convert.ToString(regressivo);
             if(regressivo == 0 ) 
@@ -330,7 +362,6 @@ namespace MarioKart
 
                 await Task.Delay(2000);
                 bandeira.Visible = false;
-
 
             }
         }
