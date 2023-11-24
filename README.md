@@ -10,10 +10,10 @@
 - [x]Sistema de Seleção de Personagens
 - [x]Sistema para não permitir personagens repetidos
 - [ ]Colocar música
-
-- Adicionado ordem de seleção
-- Retirado a opção de iniciar corrida sem personagem selecionado
-- Adicionado regra para não permitir seleção de personagens repetidos
+<br>
+<p>- Adicionado ordem de seleção
+<p>- Retirado a opção de iniciar corrida sem personagem selecionado
+<p>- Adicionado regra para não permitir seleção de personagens repetidos
 
 ## Tech Stack ⚙️
 
